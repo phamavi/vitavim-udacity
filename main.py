@@ -18,6 +18,7 @@ import webapp2
 
 import unit1
 import unit2
+import unit3
 import forms
 
 
@@ -30,5 +31,9 @@ app = webapp2.WSGIApplication([('/', MainHandler),
                                ('/Unit2/', unit2.Unit2Handler),
                                ('/Unit2/ROT13', unit2.Unit2Handler.ROT13Handler),
                                ('/Unit2/UserSignup', unit2.Unit2Handler.UserSignupHandler),
-                               ('/Unit2/Thanks', unit2.Unit2Handler.ThanksHandler)],
+                               ('/Unit2/Thanks', unit2.Unit2Handler.ThanksHandler),
+                               ('/Unit3/Blog', unit3.Unit3Handler.Blog.FrontpageHandler),
+                               ('/Unit3/Blog/newpost', unit3.Unit3Handler.Blog.NewpostHandler),
+                               ('/Unit3/Blog/([0-9]+)', unit3.Unit3Handler.Blog.PostHandler),
+                              ],
                               debug=True)
