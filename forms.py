@@ -37,3 +37,22 @@ usersignup = """
     <input type="submit">
 </form>
 """
+
+newblogpost = """
+<form method="post">
+    New Post
+    <br>
+    <label for="subject">Subject</label>
+    <input type="text" name="subject"></input>
+
+    <br>
+    <label for="content">Content</label>
+    <textarea name="content"></textarea>
+
+    <br>
+    <span style="color:red">%(error)s</span>
+    
+    <br>
+    <input type="submit"></input>
+</form>
+"""

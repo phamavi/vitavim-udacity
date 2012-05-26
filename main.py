@@ -27,11 +27,15 @@ class MainHandler(webapp2.RequestHandler):
         self.response.out.write('Hello, Udacity!')
 
 app = webapp2.WSGIApplication([('/', MainHandler),
+
                                ('/Unit1/', unit1.Unit1Handler),
+                               
                                ('/Unit2/', unit2.Unit2Handler),
                                ('/Unit2/ROT13', unit2.Unit2Handler.ROT13Handler),
                                ('/Unit2/UserSignup', unit2.Unit2Handler.UserSignupHandler),
                                ('/Unit2/Thanks', unit2.Unit2Handler.ThanksHandler),
+
+                               ('/Unit3/', unit3.Unit3Handler),
                                ('/Unit3/Blog', unit3.Unit3Handler.Blog.FrontpageHandler),
                                ('/Unit3/Blog/newpost', unit3.Unit3Handler.Blog.NewpostHandler),
                                ('/Unit3/Blog/([0-9]+)', unit3.Unit3Handler.Blog.PostHandler),
